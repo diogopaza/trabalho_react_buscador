@@ -16,6 +16,24 @@ import {
 } from 'react-native';
 
 export default class trabalho extends Component {
+  
+  
+  constructor(props){
+
+    super(props);
+
+    this.state = {
+
+      stringPesquisa : ''
+
+    }
+
+
+  }
+
+
+
+  
   render() {
     return (
       <View style={styles.container}>
@@ -31,6 +49,8 @@ export default class trabalho extends Component {
         <TextInput 
           placeholder = "Digite aqui o local"
           style = { styles.entradaTexto }
+          value = { this.state.stringPesquisa }
+          
       />
 
       <TouchableHighlight
@@ -51,15 +71,17 @@ const styles = StyleSheet.create({
     //justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-    marginTop:64,
+    padding:28,
 
   },
   entradaTexto: {
-
-    height:80,
-    width: 200,
-    borderWidth: 1,
+   
+    height:36,
+    padding: 4,
     marginBottom: 10,
+    alignSelf: 'stretch',
+    fontSize: 14,
+    color: '#8cc53e',
 },
 botao: {
 
@@ -69,6 +91,8 @@ botao: {
   borderColor: '#8cc53e',
   borderRadius: 6,
   marginBottom:10,
+  alignSelf: 'stretch',
+
 
  
 },
@@ -76,12 +100,15 @@ botao: {
 textoBotao: {
   fontSize:18,
   color:'white',
+  alignSelf: 'center',
+  marginTop: 4,
+ 
 
 
 },
 
 descricao: {
-  marginBottom: 18,
+  marginBottom: 12,
   fontSize: 16,
   textAlign: 'center',
   color: 'gray',
